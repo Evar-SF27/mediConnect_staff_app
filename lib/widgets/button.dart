@@ -6,7 +6,7 @@ GestureDetector button({required onTap, required String text}) {
       onTap: onTap,
       child: Container(
         padding: const EdgeInsets.all(15),
-        margin: const EdgeInsets.symmetric(horizontal: 25),
+        margin: const EdgeInsets.symmetric(horizontal: 15),
         decoration: BoxDecoration(
             color: AppColors.lightColor,
             borderRadius: BorderRadius.circular(8)),

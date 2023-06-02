@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 Padding formInputField(
     {required controller, required bool hideText, required labelText}) {
   return Padding(
-    padding: const EdgeInsets.symmetric(horizontal: 25.0),
+    padding: const EdgeInsets.symmetric(horizontal: 15.0),
     child: TextFormField(
       controller: controller,
       obscureText: hideText,
@@ -26,7 +26,7 @@ Padding formInputField(
 Padding emailInputField(
     {required controller, required bool hideText, required labelText}) {
   return Padding(
-    padding: const EdgeInsets.symmetric(horizontal: 25.0),
+    padding: const EdgeInsets.symmetric(horizontal: 15.0),
     child: TextFormField(
       controller: controller,
       obscureText: hideText,
@@ -34,33 +34,6 @@ Padding emailInputField(
       validator: (email) {
         email != null && !EmailValidator.validate(email)
             ? "Enter a valid email"
-            : null;
-        return null;
-      },
-      decoration: InputDecoration(
-          enabledBorder: const OutlineInputBorder(
-              borderRadius: BorderRadius.all(Radius.elliptical(10, 10)),
-              borderSide: BorderSide(color: AppColors.greyColor)),
-          focusedBorder: const OutlineInputBorder(
-              borderRadius: BorderRadius.all(Radius.elliptical(10, 10)),
-              borderSide: BorderSide(color: AppColors.lightColor)),
-          labelText: labelText,
-          labelStyle: const TextStyle(color: AppColors.greyColor)),
-    ),
-  );
-}
-
-Padding passwordInputField(
-    {required controller, required bool hideText, required labelText}) {
-  return Padding(
-    padding: const EdgeInsets.symmetric(horizontal: 25.0),
-    child: TextFormField(
-      controller: controller,
-      obscureText: hideText,
-      autovalidateMode: AutovalidateMode.onUserInteraction,
-      validator: (value) {
-        value != null && value.length < 6
-            ? "Enter minimum of 6 characters"
             : null;
         return null;
       },
