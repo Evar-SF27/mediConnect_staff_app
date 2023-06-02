@@ -1,4 +1,3 @@
-import 'package:app/screens/register.dart';
 import 'package:app/utils/colors.dart';
 import 'package:app/utils/responsive.dart';
 import 'package:app/widgets/button.dart';
@@ -7,23 +6,22 @@ import 'package:app/widgets/other_auth.dart';
 import 'package:flutter/material.dart';
 import '../widgets/password.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class RegisterScreen extends StatefulWidget {
+  const RegisterScreen({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<RegisterScreen> createState() => _RegisterScreenState();
 }
 
-enum Role { staff, doctor, user }
-
-class _LoginScreenState extends State<LoginScreen> {
-  Role? selectedRole;
+class _RegisterScreenState extends State<RegisterScreen> {
   final formKey = GlobalKey<FormState>();
+  final usernameController = TextEditingController();
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
 
   @override
   void dispose() {
+    usernameController.dispose();
     emailController.dispose();
     passwordController.dispose();
 
@@ -74,6 +72,11 @@ class _LoginScreenState extends State<LoginScreen> {
                           style: TextStyle(
                               fontSize: 18, color: AppColors.greyColor))),
                   SizedBox(height: height * 0.064),
+                  formInputField(
+                      controller: usernameController,
+                      hideText: true,
+                      labelText: "Username"),
+                  SizedBox(height: height * 0.03),
                   emailInputField(
                       controller: emailController,
                       hideText: false,
@@ -81,52 +84,12 @@ class _LoginScreenState extends State<LoginScreen> {
                   SizedBox(height: height * 0.03),
                   PasswordInputField(
                       controller: passwordController, labelText: "Password"),
-                  Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 25, vertical: 4),
-                      child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            GestureDetector(
-                              onTap: () {},
-                              child: const Text("Forgot Password",
-                                  style:
-                                      TextStyle(color: AppColors.lightColor)),
-                            )
-                          ])),
-                  SizedBox(height: height * 0.03),
-                  Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 15),
-                      child: Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 3),
-                        decoration: BoxDecoration(
-                            border: Border.all(
-                                width: 1, color: AppColors.greyColor),
-                            borderRadius: BorderRadius.circular(10)),
-                        child: DropdownButton(
-                            value: selectedRole,
-                            items: const [
-                              DropdownMenuItem(
-                                  value: Role.staff, child: Text("Staff")),
-                              DropdownMenuItem(
-                                  value: Role.doctor, child: Text("Doctor")),
-                              DropdownMenuItem(
-                                  value: Role.user, child: Text("User")),
-                            ],
-                            isExpanded: true,
-                            focusColor: Colors.transparent,
-                            padding: const EdgeInsets.symmetric(horizontal: 10),
-                            underline: const SizedBox.square(),
-                            onChanged: (Role? value) {
-                              selectedRole = value;
-                            }),
-                      )),
                   SizedBox(height: height * 0.04),
-                  button(onTap: null, text: "Sign In"),
+                  button(onTap: null, text: "Register"),
                   SizedBox(height: height * 0.04),
                   otherAuth(),
                   Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 25),
+                      padding: const EdgeInsets.symmetric(horizontal: 55),
                       child: GestureDetector(
                         onTap: () {
                           Navigator.push(
@@ -137,9 +100,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         },
                         child: const Row(
                           children: [
-                            Text("Don't have a user account?"),
+                            Text("Already have an account?"),
                             SizedBox(width: 4),
-                            Text("Register Now",
+                            Text("Sign In",
                                 style: TextStyle(
                                     color: AppColors.lightColor,
                                     fontWeight: FontWeight.bold))
