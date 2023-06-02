@@ -1,4 +1,6 @@
 import 'package:app/utils/colors.dart';
+import 'package:app/utils/responsive.dart';
+import 'package:app/widgets/button.dart';
 import 'package:app/widgets/input.dart';
 import 'package:flutter/material.dart';
 
@@ -22,15 +24,18 @@ class _LoginScreenState extends State<LoginScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Expanded(
-                child: Container(
-              height: height,
-              color: AppColors.mainColor,
-              child: const Center(
-                child: Text("MediConnect", style: TextStyle(fontSize: 48)),
-              ),
-            )),
-            SizedBox(width: height * 0.1),
+            ResponsiveWidget.isSmallScreen(context)
+                ? const SizedBox()
+                : Expanded(
+                    child: Container(
+                    height: height,
+                    color: AppColors.mainColor,
+                    child: const Center(
+                      child:
+                          Text("MediConnect", style: TextStyle(fontSize: 48)),
+                    ),
+                  )),
+            SizedBox(width: height * 0.07),
             Expanded(
                 child: SizedBox(
                     height: height,
@@ -38,27 +43,47 @@ class _LoginScreenState extends State<LoginScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        SizedBox(width: height * 0.145),
-                        Center(
-                            child: RichText(
-                                text: const TextSpan(children: [
-                          TextSpan(
-                              text: "Sign In Page",
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 32,
-                                  color: AppColors.mainColor))
-                        ]))),
-                        Center(
-                            child: RichText(
-                                text: const TextSpan(
-                                    text:
-                                        "Sign in to connect to your Health System",
-                                    style: TextStyle(
-                                        fontSize: 16,
-                                        color: AppColors.greyColor))))
+                        SizedBox(width: height * 0.05),
+                        SizedBox(height: height * 0.2),
+                        const Center(
+                            child: Text("MediConnect",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 38,
+                                    color: AppColors.lightColor))),
+                        const SizedBox(height: 5),
+                        const Center(
+                            child: Text(
+                                "Sign in to connect to your Health System",
+                                style: TextStyle(
+                                    fontSize: 18, color: AppColors.greyColor))),
+                        SizedBox(height: height * 0.064),
+                        emailInputField(
+                            controller: null,
+                            hideText: false,
+                            labelText: "Email"),
+                        SizedBox(height: height * 0.04),
+                        formInputField(
+                            controller: null,
+                            hideText: true,
+                            labelText: "Password"),
+                        Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 28),
+                            child: Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  GestureDetector(
+                                    onTap: () {},
+                                    child: const Text("Forgot Password",
+                                        style: TextStyle(
+                                            color: AppColors.greyColor)),
+                                  )
+                                ])),
+                        SizedBox(height: height * 0.04),
+                        button(onTap: null, text: "Sign In")
                       ],
-                    )))
+                    ))),
+            SizedBox(width: height * 0.07),
           ]),
     ));
   }

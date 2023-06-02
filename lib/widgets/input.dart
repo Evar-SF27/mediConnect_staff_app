@@ -16,7 +16,7 @@ Padding formInputField(
               borderSide: BorderSide(color: AppColors.greyColor)),
           focusedBorder: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.elliptical(10, 10)),
-              borderSide: BorderSide(color: Colors.green)),
+              borderSide: BorderSide(color: AppColors.lightColor)),
           labelText: labelText,
           labelStyle: const TextStyle(color: AppColors.greyColor)),
     ),
@@ -40,15 +40,12 @@ Padding emailInputField(
       decoration: InputDecoration(
           enabledBorder: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.elliptical(10, 10)),
-              borderSide:
-                  BorderSide(color: Color.fromARGB(255, 223, 240, 223))),
+              borderSide: BorderSide(color: AppColors.greyColor)),
           focusedBorder: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.elliptical(10, 10)),
-              borderSide: BorderSide(color: Colors.green)),
-          fillColor: const Color.fromARGB(255, 223, 240, 223),
-          filled: true,
+              borderSide: BorderSide(color: AppColors.lightColor)),
           labelText: labelText,
-          labelStyle: const TextStyle(color: Colors.green)),
+          labelStyle: const TextStyle(color: AppColors.greyColor)),
     ),
   );
 }
@@ -70,15 +67,12 @@ Padding passwordInputField(
       decoration: InputDecoration(
           enabledBorder: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.elliptical(10, 10)),
-              borderSide:
-                  BorderSide(color: Color.fromARGB(255, 223, 240, 223))),
+              borderSide: BorderSide(color: AppColors.greyColor)),
           focusedBorder: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.elliptical(10, 10)),
-              borderSide: BorderSide(color: Colors.green)),
-          fillColor: const Color.fromARGB(255, 223, 240, 223),
-          filled: true,
+              borderSide: BorderSide(color: AppColors.lightColor)),
           labelText: labelText,
-          labelStyle: const TextStyle(color: Colors.green)),
+          labelStyle: const TextStyle(color: AppColors.greyColor)),
     ),
   );
 }
@@ -93,15 +87,12 @@ Padding textInputField(
       decoration: InputDecoration(
           enabledBorder: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.elliptical(10, 10)),
-              borderSide:
-                  BorderSide(color: Color.fromARGB(255, 230, 239, 230))),
+              borderSide: BorderSide(color: AppColors.greyColor)),
           focusedBorder: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.elliptical(10, 10)),
-              borderSide: BorderSide(color: Colors.green)),
-          fillColor: const Color.fromARGB(255, 230, 239, 230),
-          filled: true,
+              borderSide: BorderSide(color: AppColors.lightColor)),
           hintText: hintText,
-          hintStyle: const TextStyle(color: Colors.green)),
+          hintStyle: const TextStyle(color: AppColors.greyColor)),
     ),
   );
 }

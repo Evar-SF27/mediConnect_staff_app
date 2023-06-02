@@ -17,10 +17,10 @@ IconData iconLight = Icons.wb_sunny;
 IconData iconDark = Icons.nights_stay;
 
 ThemeData lightTheme =
-    ThemeData(primarySwatch: Colors.amber, brightness: Brightness.light);
+    ThemeData(primarySwatch: Colors.blue, brightness: Brightness.light);
 
 ThemeData darkTheme =
-    ThemeData(primarySwatch: Colors.amber, brightness: Brightness.dark);
+    ThemeData(primarySwatch: Colors.blue, brightness: Brightness.dark);
 
 class _MyAppState extends State<MyApp> {
   @override
