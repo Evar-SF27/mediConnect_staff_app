@@ -1,6 +1,5 @@
-import 'package:app/screens/login.dart';
-import 'package:app/screens/dashboard.dart';
-import 'package:app/utils/responsive.dart';
+// import 'package:app/screens/login_screen.dart';
+import 'package:app/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -34,7 +33,7 @@ class _MyAppState extends State<MyApp> {
         home: Scaffold(
           body: ConstrainedBox(
               constraints: const BoxConstraints(minWidth: 700),
-              child: const Dashboard()),
+              child: const HomeScreen()),
         ));
   }
 }

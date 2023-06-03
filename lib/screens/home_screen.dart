@@ -5,14 +5,34 @@ import 'package:app/widgets/side.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Dashboard extends StatefulWidget {
-  const Dashboard({super.key});
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
 
   @override
-  State<Dashboard> createState() => _DashboardState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _DashboardState extends State<Dashboard> {
+class _HomeScreenState extends State<HomeScreen> {
+  final List<Widget> screens = [
+    // const Dashboard(),
+    // const ConsultationScreen(),
+    // const LaboratoryScreen(),
+    // const AdmissionScreen(),
+    // const StaffScreen(),
+    // const DoctorScreen(),
+    // const PatientScreen(),
+    // const PaymentScreen(),
+    // const StatisticsScreen(),
+  ];
+
+  int currentIndex = 0;
+
+  void onTap(int index) {
+    setState(() {
+      currentIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,7 +56,7 @@ class _DashboardState extends State<Dashboard> {
                   child: Row(
                     children: [
                       const SizedBox(width: 15),
-                      const Text("Dashboard",
+                      const Text("HomeScreen",
                           style: TextStyle(
                               fontSize: 20, fontWeight: FontWeight.bold)),
                       const SizedBox(width: 5),
