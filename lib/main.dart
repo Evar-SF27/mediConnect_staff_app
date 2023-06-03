@@ -1,4 +1,6 @@
 import 'package:app/screens/login.dart';
+import 'package:app/screens/dashboard.dart';
+import 'package:app/utils/responsive.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -29,6 +31,10 @@ class _MyAppState extends State<MyApp> {
         title: 'MediConnect',
         debugShowCheckedModeBanner: false,
         theme: !iconBool ? darkTheme : lightTheme,
-        home: const LoginScreen());
+        home: Scaffold(
+          body: ConstrainedBox(
+              constraints: const BoxConstraints(minWidth: 700),
+              child: const Dashboard()),
+        ));
   }
 }

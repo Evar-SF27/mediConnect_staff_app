@@ -61,9 +61,6 @@ Padding textInputField(
           enabledBorder: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.elliptical(10, 10)),
               borderSide: BorderSide(color: AppColors.greyColor)),
-          focusedBorder: const OutlineInputBorder(
-              borderRadius: BorderRadius.all(Radius.elliptical(10, 10)),
-              borderSide: BorderSide(color: AppColors.lightColor)),
           hintText: hintText,
           hintStyle: const TextStyle(color: AppColors.greyColor)),
     ),
