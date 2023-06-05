@@ -8,5 +8,6 @@ class AppColors {
   static const Color textColor = Color.fromARGB(255, 88, 88, 88);
   static const Color greyColor = Color.fromARGB(255, 163, 163, 163);
   static const Color whiteColor = Color(0xffFFFFFF);
-  static const Color opaqueBackground = Color.fromARGB(11, 211, 211, 211);
+  static const Color opaqueBackground = Color.fromARGB(21, 203, 203, 203);
+  static const Color opaqueBlueBackground = Color.fromARGB(22, 173, 173, 173);
 }

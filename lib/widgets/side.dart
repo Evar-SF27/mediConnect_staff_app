@@ -18,7 +18,7 @@ class _SideBarState extends State<SideBar> {
     return SingleChildScrollView(
         child: Container(
       height: screenHeight(context),
-      width: screenWidth(context) * 0.27,
+      width: screenWidth(context) * 0.23,
       padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 25),
       decoration: const BoxDecoration(
           border: Border(

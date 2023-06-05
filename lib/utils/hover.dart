@@ -24,7 +24,7 @@ class _HoverContainerState extends State<HoverContainer> {
       onEnter: (event) => setState(() => isHovering = true),
       onExit: (event) => setState(() => isHovering = false),
       child: Container(
-          width: screenWidth(context) * 0.225,
+          width: screenWidth(context) * 0.2,
           decoration: BoxDecoration(
               color: isHovering ? widget.hoverColor : widget.defaultColor,
               borderRadius: const BorderRadius.all(Radius.circular(10))),

@@ -50,10 +50,11 @@ Padding emailInputField(
   );
 }
 
-Padding textInputField(
+Container textInputField(
     {required controller, required bool hideText, required hintText}) {
-  return Padding(
+  return Container(
     padding: const EdgeInsets.symmetric(horizontal: 25.0),
+    height: 45,
     child: TextField(
       controller: controller,
       obscureText: hideText,
