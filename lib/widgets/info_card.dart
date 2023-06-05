@@ -1,20 +1,63 @@
 import 'package:app/utils/colors.dart';
 import 'package:app/utils/screen.dart';
+import 'package:app/widgets/stateless_tile.dart';
 import 'package:flutter/cupertino.dart';
 
 Container mainInfoCard(context) {
   return Container(
       margin: const EdgeInsets.only(top: 10),
+      padding: const EdgeInsets.all(15),
       width: screenWidth(context) * 0.42,
       height: screenHeight(context) * 0.635,
       decoration: const BoxDecoration(
-          color: AppColors.opaqueBlueBackground,
+          color: AppColors.opaqueLightBackground,
           borderRadius: BorderRadius.all(Radius.circular(10))),
       child: SingleChildScrollView(
         scrollDirection: Axis.vertical,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [],
+        child: Column(
+          children: [
+            Row(
+              children: [
+                SizedBox(width: 10),
+                Text("Today's Consultation",
+                    style: TextStyle(
+                        fontSize: 28,
+                        fontWeight: FontWeight.bold,
+                        color: AppColors.mainColor))
+              ],
+            ),
+            SizedBox(height: 15),
+            Row(
+              children: [
+                Column(
+                  children: [
+                    tileModelOne(context),
+                    tileModelOne(context),
+                    tileModelOne(context),
+                    tileModelOne(context),
+                    tileModelOne(context),
+                    tileModelOne(context),
+                    tileModelOne(context),
+                    tileModelOne(context),
+                    tileModelOne(context),
+                    tileModelOne(context),
+                    tileModelOne(context),
+                    tileModelOne(context),
+                    tileModelOne(context),
+                    tileModelOne(context),
+                    tileModelOne(context),
+                    tileModelOne(context),
+                    tileModelOne(context),
+                    tileModelOne(context),
+                    tileModelOne(context),
+                    tileModelOne(context),
+                    tileModelOne(context),
+                    tileModelOne(context),
+                  ],
+                )
+              ],
+            )
+          ],
         ),
       ));
 }
@@ -22,16 +65,43 @@ Container mainInfoCard(context) {
 Container rightInfoCard(context) {
   return Container(
       margin: const EdgeInsets.only(top: 10),
+      padding: const EdgeInsets.all(13),
       width: screenWidth(context) * 0.3,
       height: screenHeight(context) * 0.31,
       decoration: const BoxDecoration(
-          color: AppColors.opaqueBlueBackground,
+          color: AppColors.opaqueLightBackground,
           borderRadius: BorderRadius.all(Radius.circular(10))),
       child: SingleChildScrollView(
         scrollDirection: Axis.vertical,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [],
+        child: Column(
+          children: [
+            Row(
+              children: [
+                SizedBox(width: 10),
+                Text("Doctor's on duty",
+                    style: TextStyle(
+                        fontSize: 22,
+                        color: AppColors.mainColor,
+                        fontWeight: FontWeight.bold)),
+              ],
+            ),
+            SizedBox(height: 10),
+            Row(
+              children: [
+                Column(
+                  children: [
+                    tileModelTwo(context),
+                    tileModelTwo(context),
+                    tileModelTwo(context),
+                    tileModelTwo(context),
+                    tileModelTwo(context),
+                    tileModelTwo(context),
+                    tileModelTwo(context),
+                  ],
+                )
+              ],
+            )
+          ],
         ),
       ));
 }
@@ -39,16 +109,27 @@ Container rightInfoCard(context) {
 Container infoCard(context) {
   return Container(
       margin: const EdgeInsets.only(top: 10),
+      padding: const EdgeInsets.all(10),
       width: screenWidth(context) * 0.5,
       height: screenHeight(context) * 0.625,
       decoration: const BoxDecoration(
-          color: AppColors.opaqueBlueBackground,
+          // color: AppColors.opaqueBlueBackground,
           borderRadius: BorderRadius.all(Radius.circular(10))),
       child: SingleChildScrollView(
         scrollDirection: Axis.vertical,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [],
+        child: Column(
+          children: [
+            Row(
+              children: [
+                SizedBox(width: 10),
+                Text("Today's Consultation",
+                    style: TextStyle(
+                        fontSize: 26,
+                        color: AppColors.mainColor,
+                        fontWeight: FontWeight.bold))
+              ],
+            )
+          ],
         ),
       ));
 }
