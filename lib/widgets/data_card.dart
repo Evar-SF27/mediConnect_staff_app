@@ -14,7 +14,7 @@ class _DataCardState extends State<DataCard> {
   Widget build(BuildContext context) {
     return Container(
         width: screenWidth(context) * 0.73,
-        height: 190,
+        height: 185,
         child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(

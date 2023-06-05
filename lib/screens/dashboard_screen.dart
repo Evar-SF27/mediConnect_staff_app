@@ -16,7 +16,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
   Widget build(BuildContext context) {
     return Expanded(
         child: Container(
-      padding: const EdgeInsets.all(5),
+      padding: const EdgeInsets.symmetric(horizontal: 6),
       child: Column(
         children: [
           const SearchContainer(),
@@ -25,9 +25,18 @@ class _DashboardScreenState extends State<DashboardScreen> {
             padding: const EdgeInsets.all(10),
             child: Column(children: [
               const DataCard(),
-              Row(
-                children: [infoCard()],
-              ),
+              Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      mainInfoCard(context),
+                      Column(children: [
+                        rightInfoCard(context),
+                        rightInfoCard(context)
+                      ])
+                    ],
+                  )),
             ]),
           )
         ],

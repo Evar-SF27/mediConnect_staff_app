@@ -12,7 +12,7 @@ class _TileState extends State<Tile> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        width: 245,
+        width: 247,
         height: 180,
         padding: const EdgeInsets.all(13),
         decoration: const BoxDecoration(
