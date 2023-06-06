@@ -1,32 +1,30 @@
 import 'package:app/utils/screen.dart';
-import 'package:app/widgets/tile.dart';
+import 'package:app/widgets/graph_tile.dart';
 import 'package:flutter/material.dart';
 
-class DataCard extends StatefulWidget {
-  const DataCard({super.key});
+class GraphDataCard extends StatefulWidget {
+  const GraphDataCard({super.key});
 
   @override
-  State<DataCard> createState() => _DataCardState();
+  State<GraphDataCard> createState() => _GraphDataCardState();
 }
 
-class _DataCardState extends State<DataCard> {
+class _GraphDataCardState extends State<GraphDataCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
         width: screenWidth(context) * 0.73,
-        height: 185,
+        height: screenHeight(context) * 0.3,
         child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Tile(),
-              SizedBox(width: 14),
-              Tile(),
-              SizedBox(width: 14),
-              Tile(),
-              SizedBox(width: 14),
-              Tile()
+              GraphTile(),
+              SizedBox(width: 10),
+              GraphTile(),
+              SizedBox(width: 10),
+              GraphTile()
             ],
           ),
         ));

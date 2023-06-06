@@ -5,7 +5,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SearchContainer extends StatefulWidget {
-  const SearchContainer({super.key});
+  final String screenName;
+  const SearchContainer({super.key, required this.screenName});
 
   @override
   State<SearchContainer> createState() => _SearchContainerState();
@@ -29,9 +30,11 @@ class _SearchContainerState extends State<SearchContainer> {
                   color: AppColors.opaqueBackground),
               child: Row(children: [
                 const SizedBox(width: 15),
-                const Text("Dashboard",
-                    style:
-                        TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                SizedBox(
+                    width: 140,
+                    child: Text(widget.screenName,
+                        style: const TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold))),
                 const SizedBox(width: 5),
                 Expanded(
                   child: textInputField(

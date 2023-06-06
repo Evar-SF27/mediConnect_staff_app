@@ -1,21 +1,17 @@
-import 'package:app/utils/colors.dart';
-import 'package:app/utils/screen.dart';
 import 'package:app/views/consulation.dart';
-import 'package:app/views/payments.dart';
 import 'package:app/widgets/graph_card.dart';
 import 'package:app/widgets/info_card.dart';
 import 'package:app/widgets/search.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class PaymentScreen extends StatefulWidget {
-  const PaymentScreen({super.key});
+class ConsultationScreen extends StatefulWidget {
+  const ConsultationScreen({super.key});
 
   @override
-  State<PaymentScreen> createState() => _PaymentScreenState();
+  State<ConsultationScreen> createState() => _ConsultationScreenState();
 }
 
-class _PaymentScreenState extends State<PaymentScreen> {
+class _ConsultationScreenState extends State<ConsultationScreen> {
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -23,7 +19,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
       padding: const EdgeInsets.symmetric(horizontal: 6),
       child: Column(
         children: [
-          const SearchContainer(screenName: "Payments"),
+          const SearchContainer(screenName: "Consultation"),
           Container(
             margin: const EdgeInsets.symmetric(vertical: 5),
             padding: const EdgeInsets.all(10),
@@ -34,7 +30,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      ViewPayments()
+                      ViewConsultation()
                       // Column(children: [
                       //   rightInfoCard(context),
                       //   rightInfoCard(context)

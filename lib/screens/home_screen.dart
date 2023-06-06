@@ -1,3 +1,5 @@
+import 'package:app/screens/consultation_screen.dart';
+import 'package:app/screens/payment_screen.dart';
 import 'package:app/utils/colors.dart';
 import 'package:app/utils/screen.dart';
 import 'package:app/widgets/input.dart';
@@ -17,19 +19,19 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   final List<Widget> screens = [
     const DashboardScreen(),
-    // const ConsultationScreen(),
+    const ConsultationScreen(),
     // const LaboratoryScreen(),
     // const AdmissionScreen(),
     // const StaffScreen(),
     // const DoctorScreen(),
     // const PatientScreen(),
-    // const PaymentScreen(),
+    const PaymentScreen(),
     // const StatisticsScreen(),
   ];
 
   int currentIndex = 0;
 
-  void onTap(int index) {
+  void selectIndex(int index) {
     setState(() {
       currentIndex = index;
     });
@@ -40,7 +42,10 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
         body: SafeArea(
       child: Row(
-        children: [const SideBar(), const DashboardScreen()],
+        children: [
+          SideBar(onButtonPressed: selectIndex),
+          screens[currentIndex]
+        ],
       ),
     ));
   }

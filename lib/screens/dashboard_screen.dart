@@ -19,7 +19,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
       padding: const EdgeInsets.symmetric(horizontal: 6),
       child: Column(
         children: [
-          const SearchContainer(),
+          const SearchContainer(screenName: "Dashboard"),
           Container(
             margin: const EdgeInsets.symmetric(vertical: 5),
             padding: const EdgeInsets.all(10),

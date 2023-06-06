@@ -22,11 +22,14 @@ ThemeData lightTheme = ThemeData(
     primarySwatch: Colors.blue,
     brightness: Brightness.light,
     primaryColor: Colors.white,
+    cardColor: Colors.white,
     scaffoldBackgroundColor: AppColors.backColor);
 
 ThemeData darkTheme = ThemeData(
     primarySwatch: Colors.blue,
     brightness: Brightness.dark,
+    primaryColor: Colors.black,
+    cardColor: AppColors.opaqueBackground,
     scaffoldBackgroundColor: const Color.fromARGB(255, 26, 26, 26));
 
 class _MyAppState extends State<MyApp> {

@@ -1,21 +1,21 @@
 import 'package:app/utils/colors.dart';
 import 'package:flutter/material.dart';
 
-class Tile extends StatefulWidget {
-  const Tile({super.key});
+class GraphTile extends StatefulWidget {
+  const GraphTile({super.key});
 
   @override
-  State<Tile> createState() => _TileState();
+  State<GraphTile> createState() => _GraphTileState();
 }
 
-class _TileState extends State<Tile> {
+class _GraphTileState extends State<GraphTile> {
   @override
   Widget build(BuildContext context) {
     return Card(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         child: Container(
-            width: 245,
-            height: 180,
+            width: 335,
+            height: 270,
             padding: const EdgeInsets.all(13),
             decoration: const BoxDecoration(
                 color: AppColors.opaqueBlueBackground,
