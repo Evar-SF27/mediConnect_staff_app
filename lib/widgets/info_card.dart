@@ -181,3 +181,48 @@ Card graphInfoCard(context) {
             ),
           )));
 }
+
+Card paymentInfoCard(context) {
+  return Card(
+      margin: const EdgeInsets.only(top: 10),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+      child: Container(
+          padding: const EdgeInsets.all(13),
+          width: ResponsiveWidget.isLargeScreen(context)
+              ? screenWidth(context) * 0.3
+              : screenWidth(context) * 0.33,
+          height: screenHeight(context) * 0.42,
+          child: SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    SizedBox(width: 10),
+                    Text("Completed Transactions",
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: AppColors.mainColor,
+                            fontWeight: FontWeight.bold)),
+                  ],
+                ),
+                SizedBox(height: 10),
+                Row(
+                  children: [
+                    Column(
+                      children: [
+                        tileModelTwo(context),
+                        tileModelTwo(context),
+                        tileModelTwo(context),
+                        tileModelTwo(context),
+                        tileModelTwo(context),
+                        tileModelTwo(context),
+                        tileModelTwo(context),
+                      ],
+                    )
+                  ],
+                )
+              ],
+            ),
+          )));
+}

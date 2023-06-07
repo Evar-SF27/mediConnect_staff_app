@@ -1,5 +1,8 @@
+import 'package:app/views/consultation/consultation_view.dart';
 import 'package:app/views/payment/payments.dart';
+import 'package:app/widgets/button.dart';
 import 'package:app/widgets/graph_card.dart';
+import 'package:app/widgets/info_card.dart';
 import 'package:app/widgets/search.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -30,11 +33,20 @@ class _PaymentScreenState extends State<PaymentScreen> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      ViewPayments()
-                      // Column(children: [
-                      //   rightInfoCard(context),
-                      //   rightInfoCard(context)
-                      // ])
+                      ViewPayments(),
+                      Column(children: [
+                        paymentInfoCard(context),
+                        addButton(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const ConsultationView()));
+                            },
+                            icon: CupertinoIcons.list_bullet,
+                            text: "Invoices")
+                      ])
                     ],
                   )),
             ]),

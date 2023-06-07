@@ -63,7 +63,7 @@ class _ViewPaymentsState extends State<ViewPayments> {
                                     children: [
                                       Column(
                                         children: [
-                                          Text("Date",
+                                          Text("Date/Time",
                                               style: TextStyle(
                                                   fontSize: 16,
                                                   fontWeight: FontWeight.bold)),
@@ -81,7 +81,7 @@ class _ViewPaymentsState extends State<ViewPayments> {
                                         children: [
                                           Row(
                                             children: [
-                                              Text("Status",
+                                              Text("Payment Status",
                                                   style: TextStyle(
                                                       fontSize: 16,
                                                       fontWeight:
@@ -89,20 +89,7 @@ class _ViewPaymentsState extends State<ViewPayments> {
                                             ],
                                           )
                                         ],
-                                      ),
-                                      Column(
-                                        children: [
-                                          Row(
-                                            children: [
-                                              Text("Actions",
-                                                  style: TextStyle(
-                                                      fontSize: 16,
-                                                      fontWeight:
-                                                          FontWeight.bold)),
-                                            ],
-                                          )
-                                        ],
-                                      ),
+                                      )
                                     ],
                                   )
                                 ],

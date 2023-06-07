@@ -1,6 +1,9 @@
 import 'package:app/utils/colors.dart';
 import 'package:app/utils/responsive.dart';
 import 'package:app/utils/screen.dart';
+import 'package:app/views/consultation/delete_dialog.dart';
+import 'package:app/views/consultation/update_dialog.dart';
+import 'package:app/views/consultation/view_dialog.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -88,7 +91,7 @@ class _ConsultationTileState extends State<ConsultationTile> {
                           children: [
                             Row(children: [
                               IconButton(
-                                  onPressed: null,
+                                  onPressed: () => showViewDialog(context),
                                   icon: const Icon(CupertinoIcons.eye,
                                       color: AppColors.blueDarkColor,
                                       size: 20)),
@@ -103,7 +106,7 @@ class _ConsultationTileState extends State<ConsultationTile> {
                           children: [
                             Row(children: [
                               IconButton(
-                                  onPressed: null,
+                                  onPressed: () => showUpdateDialog(context),
                                   icon: const Icon(
                                       CupertinoIcons.pencil_ellipsis_rectangle,
                                       color: AppColors.blueDarkColor,
@@ -119,9 +122,9 @@ class _ConsultationTileState extends State<ConsultationTile> {
                           children: [
                             Row(
                               children: [
-                                const IconButton(
-                                    onPressed: null,
-                                    icon: Icon(CupertinoIcons.delete,
+                                IconButton(
+                                    onPressed: () => showDeleteDialog(context),
+                                    icon: const Icon(CupertinoIcons.delete,
                                         color: Colors.red, size: 20)),
                                 Text(ResponsiveWidget.isLargeScreen(context)
                                     ? "Delete"
