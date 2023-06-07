@@ -1,5 +1,4 @@
 import 'package:app/utils/colors.dart';
-import 'package:app/utils/screen.dart';
 import 'package:app/widgets/input.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +21,7 @@ class _SearchConsultationContainerState
         padding: const EdgeInsets.symmetric(vertical: 5),
         child: Column(children: [
           Container(
-              height: screenWidth(context) * 0.05,
+              height: 60,
               decoration: BoxDecoration(
                   border:
                       Border.all(width: 1, color: AppColors.opaqueBackground),

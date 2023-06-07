@@ -1,12 +1,11 @@
 import 'package:app/views/consultation/add_consultation.dart';
 import 'package:app/views/consultation/consultation_nav.dart';
 import 'package:app/views/consultation/consultation_stats.dart';
-import 'package:app/views/consultation/update_consultation.dart';
 import 'package:app/views/consultation/view_consultation.dart';
 import 'package:flutter/material.dart';
 
 class ConsultationView extends StatefulWidget {
-  const ConsultationView({super.key});
+  const ConsultationView({Key? key}) : super(key: key);
 
   @override
   State<ConsultationView> createState() => _ConsultationViewState();
@@ -21,10 +20,9 @@ class _ConsultationViewState extends State<ConsultationView> {
     });
   }
 
-  final List<Widget> screens = [
+  final List screens = [
     const AddConsultation(),
     const ViewConsultation(),
-    const UpdateConsultation(),
     const ConsultationStatistics()
   ];
 

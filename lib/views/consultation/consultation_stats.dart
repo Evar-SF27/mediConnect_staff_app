@@ -1,5 +1,3 @@
-import 'package:app/utils/colors.dart';
-import 'package:app/utils/screen.dart';
 import 'package:app/views/consultation/search.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

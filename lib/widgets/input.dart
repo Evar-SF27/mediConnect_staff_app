@@ -67,3 +67,21 @@ Container textInputField(
     ),
   );
 }
+
+Container textField({required controller, required String labelText}) {
+  return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 15),
+      child: TextField(
+        maxLines: 5,
+        decoration: InputDecoration(
+            enabledBorder: const OutlineInputBorder(
+                borderRadius: BorderRadius.all(Radius.elliptical(10, 10)),
+                borderSide: BorderSide(color: AppColors.greyColor)),
+            focusedBorder: const OutlineInputBorder(
+                borderRadius: BorderRadius.all(Radius.elliptical(10, 10)),
+                borderSide: BorderSide(color: AppColors.lightColor)),
+            labelText: labelText,
+            labelStyle: const TextStyle(color: AppColors.greyColor)),
+        controller: controller,
+      ));
+}

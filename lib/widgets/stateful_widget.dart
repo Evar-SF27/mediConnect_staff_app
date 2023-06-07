@@ -63,9 +63,6 @@ class _TileModelState extends State<TileModel> {
                         Text("Dr. Doctor",
                             style: TextStyle(
                                 color: AppColors.greyColor, fontSize: 14)),
-                        // Text("doctorone@gmail.com",
-                        //     style: TextStyle(
-                        //         color: AppColors.greyColor, fontSize: 14))
                       ],
                     ),
                     Column(
@@ -77,25 +74,7 @@ class _TileModelState extends State<TileModel> {
                           ],
                         )
                       ],
-                    ),
-                    Column(
-                      children: [
-                        Row(
-                          children: [
-                            IconButton(
-                                onPressed: null,
-                                icon: Icon(
-                                    CupertinoIcons.pencil_ellipsis_rectangle,
-                                    color: Colors.green,
-                                    size: 25)),
-                            IconButton(
-                                onPressed: null,
-                                icon: Icon(CupertinoIcons.delete,
-                                    color: Colors.red, size: 25)),
-                          ],
-                        )
-                      ],
-                    ),
+                    )
                   ],
                 )
               ],

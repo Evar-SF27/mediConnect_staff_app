@@ -107,43 +107,8 @@ class _ConsultationNavigationState extends State<ConsultationNavigation> {
                       )),
                   GestureDetector(
                       onTap: () {
-                        widget.onButtonPressed(0);
+                        widget.onButtonPressed(2);
                         selectedItem = 2;
-                      },
-                      child: HoverContainer(
-                        defaultColor: Colors.transparent,
-                        hoverColor: AppColors.lightColor,
-                        child: Container(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 15, vertical: 13),
-                          child: ResponsiveWidget.isLargeScreen(context)
-                              ? Row(
-                                  children: [
-                                    Icon(CupertinoIcons.pencil_circle,
-                                        size: 28,
-                                        color: selectedItem == 2
-                                            ? AppColors.blueDarkColor
-                                            : null),
-                                    const SizedBox(width: 10),
-                                    Text("Update",
-                                        style: TextStyle(
-                                            fontSize: 16,
-                                            color: selectedItem == 2
-                                                ? AppColors.blueDarkColor
-                                                : null)),
-                                  ],
-                                )
-                              : Icon(CupertinoIcons.pencil_circle,
-                                  size: 28,
-                                  color: selectedItem == 2
-                                      ? AppColors.blueDarkColor
-                                      : null),
-                        ),
-                      )),
-                  GestureDetector(
-                      onTap: () {
-                        widget.onButtonPressed(0);
-                        selectedItem = 3;
                       },
                       child: HoverContainer(
                           defaultColor: Colors.transparent,

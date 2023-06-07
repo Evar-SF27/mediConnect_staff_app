@@ -22,8 +22,8 @@ class _ViewConsultationState extends State<ViewConsultation> {
             width: ResponsiveWidget.isLargeScreen(context)
                 ? screenWidth(context) * 0.42
                 : screenWidth(context) * 0.51,
-            height: screenHeight(context) * 0.54,
-            child: SingleChildScrollView(
+            height: screenHeight(context) * 0.58,
+            child: const SingleChildScrollView(
               scrollDirection: Axis.vertical,
               child: Column(
                 children: [
