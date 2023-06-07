@@ -1,6 +1,5 @@
 import 'package:app/views/consulation.dart';
 import 'package:app/widgets/graph_card.dart';
-import 'package:app/widgets/info_card.dart';
 import 'package:app/widgets/search.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +16,7 @@ class _ConsultationScreenState extends State<ConsultationScreen> {
     return Expanded(
         child: Container(
       padding: const EdgeInsets.symmetric(horizontal: 6),
-      child: Column(
+      child: ListView(
         children: [
           const SearchContainer(screenName: "Consultation"),
           Container(

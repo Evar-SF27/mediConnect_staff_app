@@ -1,4 +1,5 @@
 import 'package:app/utils/colors.dart';
+import 'package:app/utils/responsive.dart';
 import 'package:app/utils/screen.dart';
 import 'package:app/widgets/payment_tile.dart';
 import 'package:flutter/cupertino.dart';
@@ -19,7 +20,9 @@ class _ViewPaymentsState extends State<ViewPayments> {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         child: Container(
             padding: const EdgeInsets.all(15),
-            width: screenWidth(context) * 0.42,
+            width: ResponsiveWidget.isLargeScreen(context)
+                ? screenWidth(context) * 0.42
+                : screenWidth(context) * 0.5,
             height: screenHeight(context) * 0.54,
             child: SingleChildScrollView(
               scrollDirection: Axis.vertical,

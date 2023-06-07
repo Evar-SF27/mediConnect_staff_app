@@ -1,4 +1,3 @@
-import 'package:app/utils/screen.dart';
 import 'package:app/widgets/tile.dart';
 import 'package:flutter/material.dart';
 
@@ -12,8 +11,7 @@ class DataCard extends StatefulWidget {
 class _DataCardState extends State<DataCard> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-        width: screenWidth(context) * 0.73,
+    return const SizedBox(
         height: 185,
         child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,

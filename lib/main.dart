@@ -38,7 +38,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
         title: 'MediConnect',
         debugShowCheckedModeBanner: false,
-        theme: iconBool ? darkTheme : lightTheme,
+        theme: !iconBool ? darkTheme : lightTheme,
         home: Scaffold(
           body: ConstrainedBox(
               constraints: const BoxConstraints(minWidth: 700),

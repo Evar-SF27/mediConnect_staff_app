@@ -1,4 +1,5 @@
 import 'package:app/utils/colors.dart';
+import 'package:app/utils/responsive.dart';
 import 'package:app/utils/screen.dart';
 import 'package:app/widgets/stateless_tile.dart';
 import 'package:flutter/material.dart';
@@ -9,7 +10,9 @@ Card mainInfoCard(context) {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       child: Container(
           padding: const EdgeInsets.all(15),
-          width: screenWidth(context) * 0.42,
+          width: ResponsiveWidget.isLargeScreen(context)
+              ? screenWidth(context) * 0.42
+              : screenWidth(context) * 0.5,
           height: screenHeight(context) * 0.635,
           child: SingleChildScrollView(
             scrollDirection: Axis.vertical,
@@ -67,7 +70,9 @@ Card rightInfoCard(context) {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       child: Container(
           padding: const EdgeInsets.all(13),
-          width: screenWidth(context) * 0.3,
+          width: ResponsiveWidget.isLargeScreen(context)
+              ? screenWidth(context) * 0.3
+              : screenWidth(context) * 0.33,
           height: screenHeight(context) * 0.31,
           child: SingleChildScrollView(
             scrollDirection: Axis.vertical,

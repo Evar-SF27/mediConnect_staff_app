@@ -1,4 +1,5 @@
 import 'package:app/utils/colors.dart';
+import 'package:app/utils/responsive.dart';
 import 'package:app/utils/screen.dart';
 import 'package:app/widgets/stateful_widget.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +19,9 @@ class _ViewConsultationState extends State<ViewConsultation> {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         child: Container(
             padding: const EdgeInsets.all(15),
-            width: screenWidth(context) * 0.42,
+            width: ResponsiveWidget.isLargeScreen(context)
+                ? screenWidth(context) * 0.42
+                : screenWidth(context) * 0.5,
             height: screenHeight(context) * 0.54,
             child: SingleChildScrollView(
               scrollDirection: Axis.vertical,

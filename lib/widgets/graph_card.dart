@@ -12,10 +12,9 @@ class GraphDataCard extends StatefulWidget {
 class _GraphDataCardState extends State<GraphDataCard> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-        width: screenWidth(context) * 0.73,
+    return SizedBox(
         height: screenHeight(context) * 0.3,
-        child: SingleChildScrollView(
+        child: const SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

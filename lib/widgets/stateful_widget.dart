@@ -1,4 +1,5 @@
 import 'package:app/utils/colors.dart';
+import 'package:app/utils/responsive.dart';
 import 'package:app/utils/screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +16,9 @@ class _TileModelState extends State<TileModel> {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.only(bottom: 5),
-      width: screenWidth(context) * 0.39,
+      width: ResponsiveWidget.isLargeScreen(context)
+          ? screenWidth(context) * 0.39
+          : screenWidth(context) * 0.46,
       decoration: const BoxDecoration(
         border: Border(bottom: BorderSide(color: AppColors.greyColor)),
       ),

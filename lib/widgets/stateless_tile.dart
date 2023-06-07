@@ -1,4 +1,5 @@
 import 'package:app/utils/colors.dart';
+import 'package:app/utils/responsive.dart';
 import 'package:app/utils/screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -7,7 +8,9 @@ Container tileModelOne(context) {
   return Container(
     margin: const EdgeInsets.symmetric(vertical: 5),
     padding: const EdgeInsets.only(bottom: 5),
-    width: screenWidth(context) * 0.39,
+    width: ResponsiveWidget.isLargeScreen(context)
+        ? screenWidth(context) * 0.39
+        : screenWidth(context) * 0.46,
     decoration: const BoxDecoration(
       border: Border(bottom: BorderSide(color: AppColors.greyColor)),
     ),
@@ -65,7 +68,9 @@ Container tileModelTwo(context) {
   return Container(
     margin: const EdgeInsets.symmetric(vertical: 5),
     padding: const EdgeInsets.only(bottom: 5),
-    width: screenWidth(context) * 0.26,
+    width: ResponsiveWidget.isLargeScreen(context)
+        ? screenWidth(context) * 0.26
+        : screenWidth(context) * 0.29,
     decoration: const BoxDecoration(
       border: Border(bottom: BorderSide(color: AppColors.greyColor)),
     ),

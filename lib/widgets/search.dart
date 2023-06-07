@@ -16,13 +16,11 @@ class _SearchContainerState extends State<SearchContainer> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin: const EdgeInsets.symmetric(vertical: 5),
+        margin: const EdgeInsets.symmetric(vertical: 5, horizontal: 15),
         padding: const EdgeInsets.symmetric(vertical: 10),
-        width: screenWidth(context) * 0.73,
         child: Column(children: [
           Container(
-              width: screenWidth(context) * 0.73,
-              height: screenWidth(context) * 0.05,
+              height: screenWidth(context) * 0.055,
               decoration: BoxDecoration(
                   border:
                       Border.all(width: 1, color: AppColors.opaqueBackground),

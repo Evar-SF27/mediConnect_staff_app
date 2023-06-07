@@ -1,3 +1,4 @@
+import 'package:app/utils/responsive.dart';
 import 'package:app/utils/screen.dart';
 import 'package:flutter/material.dart';
 
@@ -24,7 +25,9 @@ class _HoverContainerState extends State<HoverContainer> {
       onEnter: (event) => setState(() => isHovering = true),
       onExit: (event) => setState(() => isHovering = false),
       child: Container(
-          width: screenWidth(context) * 0.2,
+          width: ResponsiveWidget.isLargeScreen(context)
+              ? screenWidth(context) * 0.2
+              : screenWidth(context) * 0.06,
           decoration: BoxDecoration(
               color: isHovering ? widget.hoverColor : widget.defaultColor,
               borderRadius: const BorderRadius.all(Radius.circular(10))),

@@ -1,9 +1,5 @@
-import 'package:app/utils/colors.dart';
-import 'package:app/utils/screen.dart';
-import 'package:app/views/consulation.dart';
 import 'package:app/views/payments.dart';
 import 'package:app/widgets/graph_card.dart';
-import 'package:app/widgets/info_card.dart';
 import 'package:app/widgets/search.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +17,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
     return Expanded(
         child: Container(
       padding: const EdgeInsets.symmetric(horizontal: 6),
-      child: Column(
+      child: ListView(
         children: [
           const SearchContainer(screenName: "Payments"),
           Container(
