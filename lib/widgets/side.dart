@@ -15,6 +15,7 @@ class SideBar extends StatefulWidget {
 }
 
 class _SideBarState extends State<SideBar> {
+  int selectedItem = 0;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -39,6 +40,7 @@ class _SideBarState extends State<SideBar> {
                   GestureDetector(
                       onTap: () {
                         widget.onButtonPressed(0);
+                        selectedItem = 0;
                       },
                       child: HoverContainer(
                         defaultColor: Colors.transparent,
@@ -47,20 +49,33 @@ class _SideBarState extends State<SideBar> {
                           padding: const EdgeInsets.symmetric(
                               horizontal: 15, vertical: 13),
                           child: ResponsiveWidget.isLargeScreen(context)
-                              ? const Row(
+                              ? Row(
                                   children: [
-                                    Icon(CupertinoIcons.home, size: 28),
-                                    SizedBox(width: 10),
+                                    Icon(CupertinoIcons.home,
+                                        size: 28,
+                                        color: selectedItem == 0
+                                            ? AppColors.blueDarkColor
+                                            : null),
+                                    const SizedBox(width: 10),
                                     Text("Dashboard",
-                                        style: TextStyle(fontSize: 16)),
+                                        style: TextStyle(
+                                            fontSize: 16,
+                                            color: selectedItem == 0
+                                                ? AppColors.blueDarkColor
+                                                : null)),
                                   ],
                                 )
-                              : const Icon(CupertinoIcons.home, size: 28),
+                              : Icon(CupertinoIcons.home,
+                                  size: 28,
+                                  color: selectedItem == 0
+                                      ? AppColors.blueDarkColor
+                                      : null),
                         ),
                       )),
                   GestureDetector(
                       onTap: () {
                         widget.onButtonPressed(1);
+                        selectedItem = 1;
                       },
                       child: HoverContainer(
                         defaultColor: Colors.transparent,
@@ -69,25 +84,35 @@ class _SideBarState extends State<SideBar> {
                           padding: const EdgeInsets.symmetric(
                               horizontal: 15, vertical: 13),
                           child: ResponsiveWidget.isLargeScreen(context)
-                              ? const Row(
+                              ? Row(
                                   children: [
                                     Icon(
                                         CupertinoIcons
                                             .list_bullet_below_rectangle,
-                                        size: 28),
-                                    SizedBox(width: 10),
+                                        size: 28,
+                                        color: selectedItem == 1
+                                            ? AppColors.blueDarkColor
+                                            : null),
+                                    const SizedBox(width: 10),
                                     Text("Consultations",
-                                        style: TextStyle(fontSize: 16)),
+                                        style: TextStyle(
+                                            fontSize: 16,
+                                            color: selectedItem == 1
+                                                ? AppColors.blueDarkColor
+                                                : null)),
                                   ],
                                 )
-                              : const Icon(
-                                  CupertinoIcons.list_bullet_below_rectangle,
-                                  size: 28),
+                              : Icon(CupertinoIcons.list_bullet_below_rectangle,
+                                  size: 28,
+                                  color: selectedItem == 1
+                                      ? AppColors.blueDarkColor
+                                      : null),
                         ),
                       )),
                   GestureDetector(
                       onTap: () {
                         widget.onButtonPressed(0);
+                        selectedItem = 2;
                       },
                       child: HoverContainer(
                         defaultColor: Colors.transparent,
@@ -96,20 +121,33 @@ class _SideBarState extends State<SideBar> {
                           padding: const EdgeInsets.symmetric(
                               horizontal: 15, vertical: 13),
                           child: ResponsiveWidget.isLargeScreen(context)
-                              ? const Row(
+                              ? Row(
                                   children: [
-                                    Icon(CupertinoIcons.lab_flask, size: 28),
-                                    SizedBox(width: 10),
+                                    Icon(CupertinoIcons.lab_flask,
+                                        size: 28,
+                                        color: selectedItem == 2
+                                            ? AppColors.blueDarkColor
+                                            : null),
+                                    const SizedBox(width: 10),
                                     Text("Laboratory",
-                                        style: TextStyle(fontSize: 16)),
+                                        style: TextStyle(
+                                            fontSize: 16,
+                                            color: selectedItem == 2
+                                                ? AppColors.blueDarkColor
+                                                : null)),
                                   ],
                                 )
-                              : const Icon(CupertinoIcons.lab_flask, size: 28),
+                              : Icon(CupertinoIcons.lab_flask,
+                                  size: 28,
+                                  color: selectedItem == 2
+                                      ? AppColors.blueDarkColor
+                                      : null),
                         ),
                       )),
                   GestureDetector(
                     onTap: () {
                       widget.onButtonPressed(0);
+                      selectedItem = 3;
                     },
                     child: HoverContainer(
                       defaultColor: Colors.transparent,
@@ -118,21 +156,34 @@ class _SideBarState extends State<SideBar> {
                         padding: const EdgeInsets.symmetric(
                             horizontal: 15, vertical: 13),
                         child: ResponsiveWidget.isLargeScreen(context)
-                            ? const Row(
+                            ? Row(
                                 children: [
-                                  Icon(CupertinoIcons.bed_double, size: 28),
-                                  SizedBox(width: 10),
+                                  Icon(CupertinoIcons.bed_double,
+                                      size: 28,
+                                      color: selectedItem == 3
+                                          ? AppColors.blueDarkColor
+                                          : null),
+                                  const SizedBox(width: 10),
                                   Text("Admission",
-                                      style: TextStyle(fontSize: 16)),
+                                      style: TextStyle(
+                                          fontSize: 16,
+                                          color: selectedItem == 3
+                                              ? AppColors.blueDarkColor
+                                              : null)),
                                 ],
                               )
-                            : const Icon(CupertinoIcons.bed_double, size: 28),
+                            : Icon(CupertinoIcons.bed_double,
+                                size: 28,
+                                color: selectedItem == 3
+                                    ? AppColors.blueDarkColor
+                                    : null),
                       ),
                     ),
                   ),
                   GestureDetector(
                       onTap: () {
                         widget.onButtonPressed(0);
+                        selectedItem = 4;
                       },
                       child: HoverContainer(
                         defaultColor: Colors.transparent,
@@ -141,22 +192,33 @@ class _SideBarState extends State<SideBar> {
                           padding: const EdgeInsets.symmetric(
                               horizontal: 15, vertical: 13),
                           child: ResponsiveWidget.isLargeScreen(context)
-                              ? const Row(
+                              ? Row(
                                   children: [
                                     Icon(CupertinoIcons.person_2_fill,
-                                        size: 28),
-                                    SizedBox(width: 10),
+                                        size: 28,
+                                        color: selectedItem == 4
+                                            ? AppColors.blueDarkColor
+                                            : null),
+                                    const SizedBox(width: 10),
                                     Text("Staff",
-                                        style: TextStyle(fontSize: 16)),
+                                        style: TextStyle(
+                                            fontSize: 16,
+                                            color: selectedItem == 4
+                                                ? AppColors.blueDarkColor
+                                                : null)),
                                   ],
                                 )
-                              : const Icon(CupertinoIcons.person_2_fill,
-                                  size: 28),
+                              : Icon(CupertinoIcons.person_2_fill,
+                                  size: 28,
+                                  color: selectedItem == 4
+                                      ? AppColors.blueDarkColor
+                                      : null),
                         ),
                       )),
                   GestureDetector(
                       onTap: () {
                         widget.onButtonPressed(0);
+                        selectedItem = 5;
                       },
                       child: HoverContainer(
                         defaultColor: Colors.transparent,
@@ -165,21 +227,33 @@ class _SideBarState extends State<SideBar> {
                           padding: const EdgeInsets.symmetric(
                               horizontal: 15, vertical: 13),
                           child: ResponsiveWidget.isLargeScreen(context)
-                              ? const Row(
+                              ? Row(
                                   children: [
-                                    Icon(CupertinoIcons.person_2_alt, size: 28),
-                                    SizedBox(width: 10),
+                                    Icon(CupertinoIcons.person_2_alt,
+                                        size: 28,
+                                        color: selectedItem == 5
+                                            ? AppColors.blueDarkColor
+                                            : null),
+                                    const SizedBox(width: 10),
                                     Text("Doctor",
-                                        style: TextStyle(fontSize: 16)),
+                                        style: TextStyle(
+                                            fontSize: 16,
+                                            color: selectedItem == 5
+                                                ? AppColors.blueDarkColor
+                                                : null)),
                                   ],
                                 )
-                              : const Icon(CupertinoIcons.person_2_alt,
-                                  size: 28),
+                              : Icon(CupertinoIcons.person_2_alt,
+                                  size: 28,
+                                  color: selectedItem == 5
+                                      ? AppColors.blueDarkColor
+                                      : null),
                         ),
                       )),
                   GestureDetector(
                       onTap: () {
                         widget.onButtonPressed(0);
+                        selectedItem = 6;
                       },
                       child: HoverContainer(
                         defaultColor: Colors.transparent,
@@ -188,22 +262,33 @@ class _SideBarState extends State<SideBar> {
                           padding: const EdgeInsets.symmetric(
                               horizontal: 15, vertical: 13),
                           child: ResponsiveWidget.isLargeScreen(context)
-                              ? const Row(
+                              ? Row(
                                   children: [
                                     Icon(CupertinoIcons.person_3_fill,
-                                        size: 28),
-                                    SizedBox(width: 10),
+                                        size: 28,
+                                        color: selectedItem == 6
+                                            ? AppColors.blueDarkColor
+                                            : null),
+                                    const SizedBox(width: 10),
                                     Text("Patients",
-                                        style: TextStyle(fontSize: 16)),
+                                        style: TextStyle(
+                                            fontSize: 16,
+                                            color: selectedItem == 6
+                                                ? AppColors.blueDarkColor
+                                                : null)),
                                   ],
                                 )
-                              : const Icon(CupertinoIcons.person_3_fill,
-                                  size: 28),
+                              : Icon(CupertinoIcons.person_3_fill,
+                                  size: 28,
+                                  color: selectedItem == 6
+                                      ? AppColors.blueDarkColor
+                                      : null),
                         ),
                       )),
                   GestureDetector(
                       onTap: () {
                         widget.onButtonPressed(2);
+                        selectedItem = 7;
                       },
                       child: HoverContainer(
                         defaultColor: Colors.transparent,
@@ -212,20 +297,33 @@ class _SideBarState extends State<SideBar> {
                           padding: const EdgeInsets.symmetric(
                               horizontal: 15, vertical: 13),
                           child: ResponsiveWidget.isLargeScreen(context)
-                              ? const Row(
+                              ? Row(
                                   children: [
-                                    Icon(CupertinoIcons.creditcard, size: 28),
-                                    SizedBox(width: 10),
+                                    Icon(CupertinoIcons.creditcard,
+                                        size: 28,
+                                        color: selectedItem == 7
+                                            ? AppColors.blueDarkColor
+                                            : null),
+                                    const SizedBox(width: 10),
                                     Text("Payment",
-                                        style: TextStyle(fontSize: 16)),
+                                        style: TextStyle(
+                                            fontSize: 16,
+                                            color: selectedItem == 7
+                                                ? AppColors.blueDarkColor
+                                                : null)),
                                   ],
                                 )
-                              : const Icon(CupertinoIcons.creditcard, size: 28),
+                              : Icon(CupertinoIcons.creditcard,
+                                  size: 28,
+                                  color: selectedItem == 7
+                                      ? AppColors.blueDarkColor
+                                      : null),
                         ),
                       )),
                   GestureDetector(
                       onTap: () {
                         widget.onButtonPressed(0);
+                        selectedItem = 8;
                       },
                       child: HoverContainer(
                         defaultColor: Colors.transparent,
@@ -234,17 +332,27 @@ class _SideBarState extends State<SideBar> {
                           padding: const EdgeInsets.symmetric(
                               horizontal: 15, vertical: 13),
                           child: ResponsiveWidget.isLargeScreen(context)
-                              ? const Row(
+                              ? Row(
                                   children: [
                                     Icon(CupertinoIcons.chart_bar_alt_fill,
-                                        size: 28),
-                                    SizedBox(width: 10),
+                                        size: 28,
+                                        color: selectedItem == 8
+                                            ? AppColors.blueDarkColor
+                                            : null),
+                                    const SizedBox(width: 10),
                                     Text("Statistics",
-                                        style: TextStyle(fontSize: 16)),
+                                        style: TextStyle(
+                                            fontSize: 16,
+                                            color: selectedItem == 8
+                                                ? AppColors.blueDarkColor
+                                                : null)),
                                   ],
                                 )
-                              : const Icon(CupertinoIcons.chart_bar_alt_fill,
-                                  size: 28),
+                              : Icon(CupertinoIcons.chart_bar_alt_fill,
+                                  size: 28,
+                                  color: selectedItem == 8
+                                      ? AppColors.blueDarkColor
+                                      : null),
                         ),
                       )),
                 ],

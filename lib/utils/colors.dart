@@ -11,5 +11,5 @@ class AppColors {
   static const Color whiteColor = Color(0xffFFFFFF);
   static const Color opaqueBackground = Color.fromARGB(21, 203, 203, 203);
   static const Color opaqueLightBackground = Color.fromARGB(11, 255, 255, 255);
-  static const Color opaqueBlueBackground = Color.fromARGB(22, 173, 173, 173);
+  static const Color opaqueBlueBackground = Color.fromARGB(24, 174, 174, 174);
 }

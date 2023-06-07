@@ -21,7 +21,7 @@ class _ViewConsultationState extends State<ViewConsultation> {
             padding: const EdgeInsets.all(15),
             width: ResponsiveWidget.isLargeScreen(context)
                 ? screenWidth(context) * 0.42
-                : screenWidth(context) * 0.5,
+                : screenWidth(context) * 0.51,
             height: screenHeight(context) * 0.54,
             child: SingleChildScrollView(
               scrollDirection: Axis.vertical,

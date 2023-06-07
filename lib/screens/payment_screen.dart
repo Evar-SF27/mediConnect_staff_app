@@ -1,4 +1,4 @@
-import 'package:app/views/payments.dart';
+import 'package:app/views/payment/payments.dart';
 import 'package:app/widgets/graph_card.dart';
 import 'package:app/widgets/search.dart';
 import 'package:flutter/cupertino.dart';
@@ -21,8 +21,8 @@ class _PaymentScreenState extends State<PaymentScreen> {
         children: [
           const SearchContainer(screenName: "Payments"),
           Container(
-            margin: const EdgeInsets.symmetric(vertical: 5),
-            padding: const EdgeInsets.all(10),
+            margin: const EdgeInsets.only(bottom: 5),
+            padding: const EdgeInsets.symmetric(horizontal: 10),
             child: Column(children: [
               const GraphDataCard(),
               Padding(

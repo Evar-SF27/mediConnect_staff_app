@@ -18,7 +18,7 @@ class _TileModelState extends State<TileModel> {
       padding: const EdgeInsets.only(bottom: 5),
       width: ResponsiveWidget.isLargeScreen(context)
           ? screenWidth(context) * 0.39
-          : screenWidth(context) * 0.46,
+          : screenWidth(context) * 0.48,
       decoration: const BoxDecoration(
         border: Border(bottom: BorderSide(color: AppColors.greyColor)),
       ),
@@ -38,7 +38,9 @@ class _TileModelState extends State<TileModel> {
           subtitle:
               const Text("patient@gmail.com", style: TextStyle(fontSize: 14)),
           trailing: SizedBox(
-            width: screenWidth(context) * 0.22,
+            width: ResponsiveWidget.isLargeScreen(context)
+                ? screenWidth(context) * 0.22
+                : screenWidth(context) * 0.25,
             child: const Column(
               children: [
                 Row(

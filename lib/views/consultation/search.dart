@@ -4,15 +4,17 @@ import 'package:app/widgets/input.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class SearchContainer extends StatefulWidget {
+class SearchConsultationContainer extends StatefulWidget {
   final String screenName;
-  const SearchContainer({super.key, required this.screenName});
+  const SearchConsultationContainer({super.key, required this.screenName});
 
   @override
-  State<SearchContainer> createState() => _SearchContainerState();
+  State<SearchConsultationContainer> createState() =>
+      _SearchConsultationContainerState();
 }
 
-class _SearchContainerState extends State<SearchContainer> {
+class _SearchConsultationContainerState
+    extends State<SearchConsultationContainer> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -28,8 +30,13 @@ class _SearchContainerState extends State<SearchContainer> {
                   color: AppColors.opaqueBackground),
               child: Row(children: [
                 const SizedBox(width: 15),
+                IconButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    icon: const Icon(CupertinoIcons.left_chevron)),
                 SizedBox(
-                    width: 140,
+                    width: 200,
                     child: Text(widget.screenName,
                         style: const TextStyle(
                             fontSize: 20, fontWeight: FontWeight.bold))),

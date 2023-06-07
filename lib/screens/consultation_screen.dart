@@ -1,6 +1,10 @@
-import 'package:app/views/consulation.dart';
+import 'package:app/views/consultation/consulation.dart';
+import 'package:app/views/consultation/consultation_view.dart';
+import 'package:app/widgets/button.dart';
 import 'package:app/widgets/graph_card.dart';
+import 'package:app/widgets/info_card.dart';
 import 'package:app/widgets/search.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ConsultationScreen extends StatefulWidget {
@@ -20,8 +24,8 @@ class _ConsultationScreenState extends State<ConsultationScreen> {
         children: [
           const SearchContainer(screenName: "Consultation"),
           Container(
-            margin: const EdgeInsets.symmetric(vertical: 5),
-            padding: const EdgeInsets.all(10),
+            margin: const EdgeInsets.only(bottom: 5),
+            padding: const EdgeInsets.symmetric(horizontal: 10),
             child: Column(children: [
               const GraphDataCard(),
               Padding(
@@ -29,11 +33,22 @@ class _ConsultationScreenState extends State<ConsultationScreen> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      ViewConsultation()
-                      // Column(children: [
-                      //   rightInfoCard(context),
-                      //   rightInfoCard(context)
-                      // ])
+                      const ViewConsultation(),
+                      Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            graphInfoCard(context),
+                            addButton(
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const ConsultationView()));
+                                },
+                                icon: CupertinoIcons.add_circled,
+                                text: "New Consultation")
+                          ])
                     ],
                   )),
             ]),

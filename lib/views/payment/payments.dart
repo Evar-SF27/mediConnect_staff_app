@@ -22,7 +22,7 @@ class _ViewPaymentsState extends State<ViewPayments> {
             padding: const EdgeInsets.all(15),
             width: ResponsiveWidget.isLargeScreen(context)
                 ? screenWidth(context) * 0.42
-                : screenWidth(context) * 0.5,
+                : screenWidth(context) * 0.51,
             height: screenHeight(context) * 0.54,
             child: SingleChildScrollView(
               scrollDirection: Axis.vertical,
@@ -39,14 +39,20 @@ class _ViewPaymentsState extends State<ViewPayments> {
                     ],
                   ),
                   Container(
-                    padding: const EdgeInsets.only(bottom: 0),
-                    width: screenWidth(context) * 0.39,
+                    margin: const EdgeInsets.only(top: 5),
+                    decoration: const BoxDecoration(
+                        color: AppColors.opaqueBlueBackground),
+                    width: ResponsiveWidget.isLargeScreen(context)
+                        ? screenWidth(context) * 0.39
+                        : screenWidth(context) * 0.51,
                     child: ListTile(
                         title: const Text("Patient Info",
                             style: TextStyle(
                                 fontSize: 16, fontWeight: FontWeight.bold)),
                         trailing: SizedBox(
-                          width: screenWidth(context) * 0.262,
+                          width: ResponsiveWidget.isLargeScreen(context)
+                              ? screenWidth(context) * 0.262
+                              : screenWidth(context) * 0.305,
                           child: const Padding(
                               padding: EdgeInsets.only(top: 15),
                               child: Column(
